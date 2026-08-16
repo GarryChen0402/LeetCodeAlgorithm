@@ -3,26 +3,16 @@ class Solution
 {
 public:
     int kthDigit(long long k){
-        // k+=1;
-        // long long curS = 10;
-        // int tmpK = k;
-        // int cntM = 1;
-        // while(tmpK > curS){
-        //     curS *= 11;
-        //     cntM ++;
-        // }
-        // long long leftK = k - curS;
-        // cntM++;
-        // long long cntB = 1;
-        // while(leftK > cntB * cntM * 10){
-        //     cntB++;
-        // }
-        // long long leftBK = leftK - cntB * cntM;
-        // cntB++;
-        // int cntS = 0;
-        // while(leftBK > cntS * cntM)cntS ++;
-        // leftBK -= cntS * cntM;
-        // long long curNum = 10 * cntB + (cntB & 1) == 1 ? leftBK :  
+        k-=1;
+        int len = 0;
+        long long preLength = 0;
+        while(k > preLength){
+            preLength += 9 * (long long)pow(10, len);
+            len++;
+        }
+        k -= preLength;
+        int num = k / len;
+        int lef = k % len;
         
     }
 };
