@@ -6,5 +6,6 @@
 #include <algorithm>
 #include <set>
 #include <cmath>
+#include <cstdint>
 #include <queue>
 using namespace std;
